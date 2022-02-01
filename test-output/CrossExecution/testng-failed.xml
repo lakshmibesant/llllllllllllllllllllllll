@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [CrossExecution]">
+  <test thread-count="5" name="TestRunner-Firefox(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.crm.comcast.orgTest.BothTCOrgTest">
+        <methods>
+          <include name="configAS"/>
+          <include name="configAC"/>
+          <include name="createOrgwithIndustry"/>
+          <include name="configAM"/>
+          <include name="configBM"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
+          <include name="contactTest"/>
+        </methods>
+      </class> <!-- com.crm.comcast.orgTest.BothTCOrgTest -->
+      <class name="com.crm.comcast.contactTest.BothTCContactTest">
+        <methods>
+          <include name="configAS"/>
+          <include name="configAC"/>
+          <include name="CreateContactTest"/>
+          <include name="configAM"/>
+          <include name="configBM"/>
+          <include name="CreateOrgWithIndsDDTest"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
+        </methods>
+      </class> <!-- com.crm.comcast.contactTest.BothTCContactTest -->
+    </classes>
+  </test> <!-- TestRunner-Firefox(failed) -->
+</suite> <!-- Failed suite [CrossExecution] -->

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="CrossExecution">
+  <test thread-count="2" name="TestRunner-chrome"  parallel="tests">
+  <parameter name="browser" value="chrome"></parameter>
+   <classes>
+      <class name="com.crm.comcast.orgTest.BothTCOrgTest"/>
+      <class name="com.crm.comcast.contactTest.BothTCContactTest"/>
+    </classes>
+  </test>
+  
+  <test thread-count="2" name="TestRunner-Firefox"  parallel="tests">
+  <parameter name="browser" value="firefox"></parameter>
+    <classes>
+      <class name="com.crm.comcast.orgTest.BothTCOrgTest"/>
+      <class name="com.crm.comcast.contactTest.BothTCContactTest"/>
+    </classes>
+  </test> 
+  </suite> 
